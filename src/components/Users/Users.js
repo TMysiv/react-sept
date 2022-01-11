@@ -16,10 +16,7 @@ const Users = () => {
     },[])
     return (
         <div className={'users'}>
-            {users.map(user => <User key = {user.id} id = {user.id} name = {user.name}
-            username = {user.username} email = {user.email} street={user.address.street} suite={user.address.suite}
-            city={user.address.city} zipcode={user.address.zipcode} lat={user.address.geo.lat} lng={user.address.geo.lng}
-            phone={user.phone} catchPhrase={user.company.catchPhrase} bs={user.company.bs}/>)
+            {users.map(user => <User key = {user.id} value={user}/>)
             }
         </div>
     );
